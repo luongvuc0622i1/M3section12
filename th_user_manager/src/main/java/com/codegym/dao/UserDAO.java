@@ -96,7 +96,7 @@ public class UserDAO implements IUserDAO {
     }
 
     @Override
-    public List<User> selecftAllUsers() {
+    public List<User> selectAllUsers() {
         // using try-with-resources to avoid closing resources (boiler plate code)
         List<User> users = new ArrayList<>();
         // Step 1: Establishing a Connection
@@ -128,7 +128,7 @@ public class UserDAO implements IUserDAO {
         boolean rowDeleted;
         try (
                 Connection connection = getConnection();
-                PreparedStatement statement = connection.prepareStatement(UPDATE_USERS_SQL);
+                PreparedStatement statement = connection.prepareStatement(DELETE_USERS_SQL);
             ) {
             statement.setInt(1, id);
             rowDeleted = statement.executeUpdate() > 0;

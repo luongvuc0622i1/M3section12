@@ -10,7 +10,7 @@ public interface IUserDAO {
 
     User selectUser(int id);
 
-    List<User> selecftAllUsers();
+    List<User> selectAllUsers();
 
     boolean deleteUser(int id) throws SQLException;
 
