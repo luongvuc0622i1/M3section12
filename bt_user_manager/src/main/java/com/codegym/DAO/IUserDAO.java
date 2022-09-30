@@ -6,6 +6,10 @@ import java.sql.SQLException;
 import java.util.List;
 
 public interface IUserDAO {
+    List<User> searchByCountry(String country);
+//
+    List<User> sortUserByName();
+
     void insertUser(User user) throws SQLException;
 
     User selectUser(int id);
